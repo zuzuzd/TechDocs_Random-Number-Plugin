@@ -1,0 +1,24 @@
+<html lang = "en">
+
+    <head>
+       <meta charset="utf-8">
+       <title>Simple Page</title>
+       <script src="../Javascript/ckeditor/ckeditor.js"></script>
+    </head>
+    <body>
+       <form>
+           <textarea name= "editor1" id="editor1" rows="10" cols="80">
+               Write your text here
+           </textarea>
+           <script>
+               var editor = CKEDITOR.replace('editor1', {
+                    language: 'de'
+                     });
+               var a = 0
+               editor.on( 'change', function( evt ) {
+                   console.log('Number of changes: ' + ++a)
+               });
+           </script>
+       </form>
+   </body>
+</html>
