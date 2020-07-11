@@ -2,7 +2,7 @@
 
     <head>
        <meta charset="utf-8">
-       <title>Simple Page</title>
+       <title>Simple Page with a Random Number Plugin</title>
        <script src="./ckeditor/ckeditor.js"></script>
     </head>
     <body>
@@ -12,9 +12,15 @@
            </textarea>
            <script>
                 var editor = CKEDITOR.replace('editor1', {
+
+                    // Defines the language of an interface
                      language: 'en',
+
+                    // Loads the Random Number plugin. This custom plugin lets the user insert a random number between 1 and 1000 into the editing area.
                      extraPlugins: 'randomnumber'
                      });
+
+                // Counts how many changes the user has made in the editor and displays the results in the browser console  
                 var a = 0
                 editor.on( 'change', function( evt ) {
                     console.log('Number of changes: ' + ++a)
