@@ -3,7 +3,7 @@
     <head>
        <meta charset="utf-8">
        <title>Simple Page</title>
-       <script src="../CKSource---Danowska---Technical-Writer-Rekrutacja-master/ckeditor/ckeditor.js"></script>
+       <script src="./ckeditor/ckeditor.js"></script>
     </head>
     <body>
        <form>
@@ -12,7 +12,8 @@
            </textarea>
            <script>
                 var editor = CKEDITOR.replace('editor1', {
-                     language: 'en'
+                     language: 'en',
+                     extraPlugins: 'randomnumber'
                      });
                 var a = 0
                 editor.on( 'change', function( evt ) {
